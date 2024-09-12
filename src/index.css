@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
+:root {
+  --background-gradient: linear-gradient(to bottom, #99CBCE, #062758);
+  
+  --dark-background: radial-gradient(#202020, #000000);
+  --light-background:  #fefefe;
+  --dark-font: black;
+  --light-font: white;
+  --brand-color: #9C8F6D;
+
+  --font-header: "Major Mono Display", monospace;
+}
+

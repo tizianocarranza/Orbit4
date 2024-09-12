@@ -1,0 +1,44 @@
+
+.journey-container{
+    position: sticky;
+    left: 90%;
+    top: 25%;
+    height: 50vh;
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.journey__start, .journey__finish{
+    height: 15px;
+    width: 15px;
+    background-color: var(--light-font);
+    border-radius: 3px;
+    transform: rotate(45deg);
+}
+
+.journey__bar{
+    flex-grow: 1;
+    position: relative;
+    width: 0.2rem;
+}
+
+.journey__bar::after{
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 0;
+    background-color: var(--light-font);
+    animation: trip linear both;
+    animation-timeline: scroll();
+    transform: translate(-50%, 0); /* Para centrarlo bien  */
+}
+
+@keyframes trip {
+    to{
+        height: 100%;
+    }
+}

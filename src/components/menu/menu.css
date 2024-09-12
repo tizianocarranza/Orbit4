@@ -1,0 +1,76 @@
+.menu {
+    --menu-height: 20vh;
+    --menu-width: 50px;
+
+    position: sticky;
+    top: calc(50vh - var(--menu-height)/2);
+    right: calc(95vw - var(--menu-width));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    gap: 10px;
+
+    height: var(--menu-height);
+    width: var(--menu-width);
+
+    background: transparent;
+    backdrop-filter: none;
+    /* background: linear-gradient(to right, rgba(204, 204, 204, 0.15), rgba(204, 204, 204, 0.15)); */
+    z-index: 10;
+}
+
+/* .menu::after {
+        content: "";
+        position: absolute;
+        height: 3vh;
+        width: 3vh;
+        background: var(--brand-color);
+        border-radius: 50%;
+        
+        
+        top: 5%;
+        right: 5%;
+        
+        } */
+
+.menu__button {
+    font-size: 1.5rem;
+    /* display: none; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* color: var(--brand-color); */
+
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(151, 151, 151, 0.1));
+    backdrop-filter: blur(20px);
+    list-style: none;
+
+    border: none;
+    border-radius: 5px;
+    border-top-left-radius: 30%;
+
+
+    transition: all 300ms ease;
+
+    filter: brightness(70%);
+}
+
+
+
+.menu__button.active {
+    color: var(--brand-color);
+    filter: brightness(100%);
+    border-radius: 1px;
+    border-top-right-radius: 30%;
+    height: 100%;
+    font-size: 2rem;
+}

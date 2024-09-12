@@ -1,0 +1,62 @@
+.slider-container {
+    position: relative;
+    z-index: 10;
+}
+.slider {
+    width: 100%;
+    border-radius: 1.5rem;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+}
+
+.slider label img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.slider__controller {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 7rem;
+    height: 0.75rem;
+
+    gap: 0.5rem;
+    opacity: 0.8;
+
+    /* Centrar un elemento absolute dentro de su contenedor relative, (no verticalmente en este caso) */
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Esto es por que lo traslada en base a su propio ancho y alto para que en conjunto con top y left quede perfectamente centrado */
+}
+
+.slider__controller-actual {
+    border-radius: 1rem;
+    width: 30%;
+    height: 100%;
+    background-color: white;
+}
+
+.slider__controller-next {
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    
+}
